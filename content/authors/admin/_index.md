@@ -50,8 +50,8 @@ interests:
 education:
   - area: Master in robotics, graphics and computer vision
     institution: University of Zaragoza
-    date_start: 09-2024
-    date_end: Present
+    date_start: 2016-01-01
+    date_end: 2020-12-31
     summary: |
       GPA: 3.8/4.0
 
