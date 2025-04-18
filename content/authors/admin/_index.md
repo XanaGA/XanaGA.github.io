@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Xavier Anadón García-Arquimbau
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+# name_pronunciation: Chien Shiung Wu
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Xavier
+last_name: Anadón García-Arquimbau
 
 # Status emoji
 status:
@@ -20,31 +20,27 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Master Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: OpenAI
+  - name: University of Zaragoza
     url: https://openai.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'xvanadon@gmail.com'
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/gcushen
   - icon: brands/linkedin
     url: https://www.linkedin.com/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
 
 interests:
   - Artificial Intelligence
@@ -52,10 +48,10 @@ interests:
   - Information Retrieval
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: Master in robotics, graphics and computer vision
+    institution: University of Zaragoza
+    date_start: 09-2024
+    date_end: Present
     summary: |
       Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     button:
