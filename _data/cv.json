@@ -14,6 +14,11 @@
     },
     "profiles": [
       {
+        "network": "Google Scholar",
+        "username": "",
+        "url": "https://scholar.google.com/citations?user=b8vHntcAAAAJ&hl=es"
+      },
+      {
         "network": "GitHub",
         "username": "XanaGA",
         "url": "https://github.com/XanaGA"
