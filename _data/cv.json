@@ -1,152 +1,141 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Xavier Anadón García-Arquimbau",
+    "email": "xvanadon@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://xanaga.github.io",
+    "summary": "PhD researcher in computer vision and machine learning at Universidad de Zaragoza. Deep learning, 3D vision, and multimodal learning.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Zaragoza",
+      "countryCode": "ES",
+      "region": "Aragón"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "XanaGA",
+        "url": "https://github.com/XanaGA"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "xavier-ag",
+        "url": "https://www.linkedin.com/in/xavier-ag/"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "position": "PhD Researcher",
+      "name": "RoPeRT Group, Universidad de Zaragoza",
+      "startDate": "2025-12",
+      "endDate": "",
+      "summary": "Geometry and learned representations for 3D scene understanding from video."
+    },
+    {
+      "position": "AI/CV Researcher",
+      "name": "RoPeRT Group, Zaragoza",
+      "startDate": "2024-09",
+      "endDate": "2025-08",
+      "summary": "Dense Visual SLAM for in-body robotics."
+    },
+    {
+      "position": "AI/CV Engineer",
+      "name": "Machine Learning Circle, Madrid",
+      "startDate": "2024-03",
+      "endDate": "2024-08",
+      "summary": "Learned semantic matching and representation alignment."
+    },
+    {
+      "position": "AI/CV Engineer",
+      "name": "Hovering Solutions, Madrid",
+      "startDate": "2023-09",
+      "endDate": "2024-02",
+      "summary": "Autonomous underground drones; deep learning for perception and reconstruction."
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "Universidad de Zaragoza",
+      "area": "PhD in Computer Vision and Machine Learning",
+      "studyType": "PhD",
+      "startDate": "2025-12",
+      "endDate": "",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
+      "institution": "Universidad de Zaragoza",
+      "area": "MSc in Robotics, Graphics and Computer Vision",
+      "studyType": "MSc",
+      "startDate": "2024-09",
+      "endDate": "2026-01",
+      "gpa": "9.62/10",
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "institution": "Universitat Jaume I",
+      "area": "BSc in Computational Mathematics",
+      "studyType": "BSc",
+      "startDate": "2019-09",
+      "endDate": "2023-07",
+      "gpa": "9.26/10",
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "C/C++", "Matlab"]
+    },
+    {
+      "name": "Deep Learning",
+      "keywords": ["PyTorch", "NeRF", "Transformers", "SLAM", "Diffusion Models"]
+    },
+    {
+      "name": "Computer Vision & Robotics",
+      "keywords": ["3D Reconstruction", "Scene Understanding", "RGB-D", "ROS"]
+    }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native" },
+    { "language": "English", "fluency": "C1 Advanced" }
+  ],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Characterizing Players of a Cube Puzzle Game with a Two-level Bag of Words",
+      "publisher": "UMAP '21",
+      "releaseDate": "2021-06-22",
+      "website": "https://dl.acm.org/doi/10.1145/3450614.3461690",
+      "summary": "Characterizing player behavior using a two-level bag of words model."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
+  "presentations": [],
+  "teaching": [],
   "portfolio": [
     {
-      "name": "Portfolio item number 1",
+      "name": "Online Dynamic Scene Graphs from RGB-D Videos",
       "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "date": "2025",
+      "url": "https://danielkorth.github.io/dynamic-scene-graphs/",
+      "description": "Build scene graphs incrementally from RGB-D video streams."
+    },
+    {
+      "name": "3D Densification for Multi-Map Monocular VSLAM in Endoscopy",
+      "category": "portfolio",
+      "date": "2025",
+      "url": "https://arxiv.org/abs/2503.14346",
+      "description": "Densify sparse endoscopy SLAM maps."
+    },
+    {
+      "name": "NeRF in Looking Glass",
+      "category": "portfolio",
+      "date": "2022",
+      "url": "https://github.com/XanaGA/ngp2looking_glass",
+      "description": "Display NGP scenes in Looking Glass displays."
     }
   ]
 }

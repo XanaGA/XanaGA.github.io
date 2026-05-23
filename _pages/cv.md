@@ -11,54 +11,42 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **PhD in Computer Vision and Machine Learning**, Universidad de Zaragoza, Dec 2025 – Present. Topic: Geometry and learned representations for 3D scene understanding from video. Supervisor: José María Martínez Montiel.
+* **MSc in Robotics, Graphics and Computer Vision**, Universidad de Zaragoza, Sep 2024 – Jan 2026 (GPA: 9.62/10). Thesis: Multimodal Floorplan Encoding (CVG ETH Zurich & Microsoft).
+* **BSc in Computational Mathematics**, Universitat Jaume I, Sep 2019 – Jul 2023 (GPA: 9.26/10, highest in class). Thesis: Geometric foundations for geometry processing of neural implicit SDF representations.
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+{% assign sorted_experience = site.experience | sort: 'order' %}
+{% for post in sorted_experience %}
+* **{{ post.title }}** ({{ post.period }}) — {{ post.organization }}
+  * {{ post.excerpt | markdownify | strip_html }}
+{% endfor %}
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Internships
+======
+* **RobotX Summer Fellowship**, Computer Vision and Geometry Lab, ETH Zurich, Jul–Sep 2025 (3% acceptance ratio)
+* **HPC Intern**, Karlsruhe Institute of Technology, Germany, Jul–Sep 2023
+* **VR Intern**, University of Eastern Finland, Jul–Sep 2022
+* **Robotics Apprenticeship**, Ingeniarius, Portugal, Jul–Sep 2021
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+Awards & Honors
+======
+* VII Premios Capitanía General de Valencia — Best academic record in Bachelor's (Engineering/Architecture), Valencian Community
+* Extraordinary End-of-Degree Award — Best academic record, Computational Mathematics promotion 2019–2023
+* Academic Excellence Ernest Breva — Best academic record in the academic year
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming:** Python, C/C++, Matlab
+* **Deep Learning:** PyTorch, Fastai, Hugging Face, TensorFlow; NeRF, Transformers, VAEs, GNNs, Diffusion Models, SLAM
+* **CV & Robotics:** 3D Reconstruction, Scene Understanding, RGB-D Processing, ROS
+* **Languages:** Spanish (Native), English (C1 Advanced)
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<ul>{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+[Download full CV (PDF)](/files/XavierAnadonCV.pdf)
