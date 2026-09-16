@@ -111,6 +111,13 @@
   "references": [],
   "publications": [
     {
+      "name": "Multimodal Floorplan Encoding: Learning Dense Modality-Invariant Representations",
+      "publisher": "TwinWorld Workshop, ECCV 2026 (Honorable Mention)",
+      "releaseDate": "2026-09-11",
+      "website": "https://arxiv.org/abs/2609.12723",
+      "summary": "Dense modality-invariant floorplan representations via DINOv3 + DPT with per-cell InfoNCE."
+    },
+    {
       "name": "Characterizing Players of a Cube Puzzle Game with a Two-level Bag of Words",
       "publisher": "UMAP '21",
       "releaseDate": "2021-06-22",

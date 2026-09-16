@@ -11,4 +11,51 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+<!-- Copy Bibtex buttons on publications -->
+<script>
+  (function () {
+    function fallbackCopy(text) {
+      var area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'absolute';
+      area.style.left = '-9999px';
+      document.body.appendChild(area);
+      area.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(area);
+      return ok;
+    }
+
+    function flash(btn, label) {
+      if (btn.dataset.originalLabel === undefined) {
+        btn.dataset.originalLabel = btn.textContent;
+      }
+      btn.textContent = label;
+      clearTimeout(btn._resetTimer);
+      btn._resetTimer = setTimeout(function () {
+        btn.textContent = btn.dataset.originalLabel;
+      }, 1500);
+    }
+
+    document.addEventListener('click', function (event) {
+      var btn = event.target.closest && event.target.closest('.js-copy-bibtex');
+      if (!btn) return;
+      event.preventDefault();
+
+      var text = btn.dataset.bibtex || '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          flash(btn, 'Copied!');
+        }, function () {
+          flash(btn, fallbackCopy(text) ? 'Copied!' : 'Copy failed');
+        });
+      } else {
+        flash(btn, fallbackCopy(text) ? 'Copied!' : 'Copy failed');
+      }
+    });
+  })();
+</script>
+
 <!-- end custom footer snippets -->

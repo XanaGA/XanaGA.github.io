@@ -57,6 +57,19 @@
   }
 }
 
+.pub-award {
+  color: var(--global-award-color);
+  font-weight: bold;
+}
+
+.pub-actions {
+  font-size: $type-size-6;
+
+  a {
+    margin-left: 0.75em;
+  }
+}
+
 .archive__item-excerpt {
   margin-top: 0;
   font-size: $type-size-6;
