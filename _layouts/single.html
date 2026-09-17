@@ -47,10 +47,11 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.bibtex or page.paperurl or page.slidesurl %}
+        {% if page.bibtex or page.paperurl or page.codeurl or page.slidesurl %}
           <p class="pub-actions" style="font-size: smaller">
             {% if page.bibtex %}<button type="button" class="btn btn--bibtex js-copy-bibtex" data-bibtex="{{ page.bibtex | escape }}">Copy Bibtex</button>{% endif %}
             {% if page.paperurl %}<a href="{{ page.paperurl }}">Paper</a>{% endif %}
+            {% if page.codeurl %}<a href="{{ page.codeurl }}">Code</a>{% endif %}
             {% if page.slidesurl %}<a href="{{ page.slidesurl }}">Slides</a>{% endif %}
           </p>
         {% endif %}

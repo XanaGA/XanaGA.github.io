@@ -18,7 +18,7 @@
         <p class="archive__item-tags"><small>{{ post.skills | join: " · " }}</small></p>
         {% endif %}
         {% if post.project_link %}
-        <p><a href="{{ post.project_link }}">See related project →</a></p>
+        <p><a href="{% if post.project_link contains "://" %}{{ post.project_link }}{% else %}{{ base_path }}{{ post.project_link }}{% endif %}">See related project →</a></p>
         {% endif %}
       </div>
     </div>

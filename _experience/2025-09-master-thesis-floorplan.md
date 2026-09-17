@@ -10,6 +10,7 @@ skills:
   - Geometry
   - Deep Learning
 image: "https://lh3.googleusercontent.com/d/1nKVPQe52g-e4ZPHa5fSDggsyJmmX8cnY"
+project_link: "/publication/2026-09-11-multimodal-floorplan-encoding"
 order: 1
 ---
 

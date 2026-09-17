@@ -8,6 +8,7 @@ date: 2026-09-11
 venue: "TwinWorld Workshop, ECCV 2026"
 award: "Honorable Mention"
 paperurl: "https://arxiv.org/abs/2609.12723"
+codeurl: "https://github.com/XanaGA/multimodal-floorplan-encoding"
 bibtex: |
   @inproceedings{anadon2026multimodal,
     title     = {Multimodal Floorplan Encoding: Learning Dense Modality-Invariant Representations},
