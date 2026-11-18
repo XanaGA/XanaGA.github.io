@@ -165,6 +165,223 @@
   }
 }
 
+/*
+   Avatar flip card (photo <-> Funko on hover) and in-place 3D splat viewer
+   (behaviour in /assets/js/funko-avatar.js)
+   ========================================================================== */
+
+$avatar-max-width: 175px;
+$avatar-3d-backdrop: radial-gradient(ellipse at 50% 40%, #3d63a0 0%, #2d4b79 55%, #1d3256 100%);
+
+.author__avatar {
+  position: relative;
+
+  // On narrow screens the avatar is a 36px table cell; give the 3D viewer real room once opened
+  &.is-active {
+    display: block;
+    width: $avatar-max-width;
+    max-width: 100%;
+    margin-bottom: 0.5em;
+
+    + .author__content {
+      padding-left: 0;
+    }
+  }
+}
+
+.avatar-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: $avatar-max-width;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: 0;
+  text-align: left;
+  perspective: 900px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.avatar-card {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible .avatar-card__face {
+    outline: 2px solid var(--global-link-color);
+    outline-offset: 2px;
+  }
+}
+
+.avatar-card__inner {
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.author__avatar img.avatar-card__face {
+  display: block;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.author__avatar img.avatar-card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: rotateY(180deg);
+}
+
+@media (hover: hover) {
+  .avatar-card:hover .avatar-card__inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.avatar-card:focus-visible .avatar-card__inner,
+.avatar-card.is-loading .avatar-card__inner,
+.author__avatar.is-3d .avatar-card__inner {
+  // stay on the Funko side under the 3D view; closing it spins back to the photo
+  transform: rotateY(180deg);
+}
+
+.avatar-card__status {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.75em;
+  border-radius: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: $type-size-7;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  &:not(:empty) {
+    opacity: 1;
+  }
+}
+
+.avatar-card.is-loading .avatar-card__back {
+  animation: avatar-card-pulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes avatar-card-pulse {
+  from { filter: brightness(1); }
+  to   { filter: brightness(0.7); }
+}
+
+.avatar-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: $avatar-max-width;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
+  @include breakpoint($large) {
+    padding: 5px;
+    border: 1px solid var(--global-border-color);
+  }
+}
+
+.avatar-3d__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: $avatar-3d-backdrop;
+  cursor: grab;
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.avatar-3d__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.12);
+  }
+}
+
+.avatar-3d__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.75em;
+  border-radius: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: $type-size-7;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.6s;
+
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+.author__avatar.is-3d {
+  .avatar-3d {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  // keep the (flipped) card under the fading-in viewer, then take it out of the tab order
+  .avatar-card {
+    visibility: hidden;
+    transition: visibility 0s 0.4s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-card__inner,
+  .avatar-3d {
+    transition: none;
+  }
+
+  .avatar-card.is-loading .avatar-card__back {
+    animation: none;
+  }
+}
+
 .author__content {
   display: table-cell;
   vertical-align: top;

@@ -23,6 +23,8 @@ repository               : "XanaGA/XanaGA.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
+  avatar_alt       : "funko/xavi-funko.webp" # Shown when hovering the avatar (flip)
+  avatar_3d        : "funko/xavi-funko.spz"  # Gaussian splat shown in place when the avatar is clicked
   name             : "Xavier Anadón García-Arquimbau"
   pronouns         :
   bio              : "PhD researcher in computer vision and machine learning. Deep learning, 3D vision, and multimodal learning."
@@ -188,6 +190,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - third_party
   - tmp
   - vendor
 keep_files:

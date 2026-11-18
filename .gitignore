@@ -5,6 +5,9 @@ _site/
 # Ignore the directory for local files during development
 local/
 
+# Ignore downloaded third-party tooling (Node, Spark repo for PLY -> SPZ)
+third_party/
+
 # Ignore the Gemfile that is generated
 Gemfile.lock
 

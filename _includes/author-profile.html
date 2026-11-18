@@ -9,6 +9,18 @@
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    {% elsif author.avatar_alt %}
+      {% if author.avatar_3d %}
+      <button type="button" class="avatar-card" data-splat="{{ author.avatar_3d | prepend: "/images/" | prepend: base_path }}" aria-label="{{ author.name }}: show interactive 3D model" title="Click to rotate me in 3D">
+      {% else %}
+      <div class="avatar-card">
+      {% endif %}
+        <span class="avatar-card__inner">
+          <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="avatar-card__face avatar-card__front" alt="{{ author.name }}" fetchpriority="high" />
+          <img src="{{ author.avatar_alt | prepend: "/images/" | prepend: base_path }}" class="avatar-card__face avatar-card__back" alt="" aria-hidden="true" />
+        </span>
+        <span class="avatar-card__status" aria-live="polite"></span>
+      {% if author.avatar_3d %}</button>{% else %}</div>{% endif %}
     {% else %}
     	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
     {% endif %}
